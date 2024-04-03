@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { StyleProvider, Themes } from '@varlet/ui'
 import { appName } from '~/constants'
 
 useHead({
   title: appName,
 })
+StyleProvider(Themes.md3Dark)
 </script>
 
 <template>
@@ -22,8 +24,7 @@ body,
   padding: 0;
 }
 
-html.dark {
-  background: #222;
-  color: white;
+html {
+  @apply bg-body;
 }
 </style>

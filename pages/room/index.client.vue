@@ -1,29 +1,33 @@
 <script setup lang="ts">
-import QrScanner from 'qr-scanner'
-
-const video = ref<HTMLVideoElement>()
+import { Html5QrcodeScanner } from 'html5-qrcode'
 
 onMounted(() => {
-  const scanner = new QrScanner(
-    video.value!,
-    (result) => {
-      // console.log('QR code detected:', result.data)
-      if (result.data.startsWith(window.location.hostname))
-        window.location.href = result.data
-    },
+  const qrCodeScanner = new Html5QrcodeScanner(
+    'qr-reader',
     {
-      highlightScanRegion: true,
-      highlightCodeOutline: true,
-      returnDetailedScanResult: true,
+      fps: 10,
+      qrbox: {
+        width: 250,
+        height: 250,
+      },
     },
+    /* verbose= */false,
   )
 
-  scanner.start()
+  qrCodeScanner.render(
+    (decodedText, decodedResult) => {
+      // eslint-disable-next-line no-console
+      console.log(decodedText, decodedResult)
+    },
+    (error) => {
+      console.error(`扫描出错: ${error}`)
+    },
+  )
 })
 </script>
 
 <template>
   <div>
-    <video ref="video" class="object-fill" />
+    <div id="qr-reader" style="width: 300px; height: 300px;" />
   </div>
 </template>

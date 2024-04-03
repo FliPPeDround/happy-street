@@ -2,18 +2,31 @@
 </script>
 
 <template>
-  <div w-full flex justify-center space-x-5>
-    <div class="enter-btn" @click="$router.push('/room')">
+  <div
+    w-full mt10
+    flex="~ col md:row"
+    items-center justify-center
+    space="y-5 md:x-5 md:y-0"
+  >
+    <var-paper
+      ripple
+      :elevation="2" :width="200" :height="200"
+      class="enter-btn"
+      @click="$router.push('/room')"
+    >
       加入房间
-    </div>
-    <div class="enter-btn">
+    </var-paper>
+    <var-paper 
+      class="enter-btn"
+      :elevation="2" :width="200" :height="200" ripple
+    >
       创建房间
-    </div>
+    </var-paper>
   </div>
 </template>
 
 <style>
 .enter-btn {
-  @apply bg-dark-3 p20 hover:bg-dark-1 cursor-pointer;
+  @apply cursor-pointer flex items-center justify-center;
 }
 </style>
