@@ -49,6 +49,9 @@ devDependencies:
   '@varlet/import-resolver':
     specifier: ^3.2.2
     version: 3.2.2
+  '@varlet/nuxt':
+    specifier: ^0.0.10
+    version: 0.0.10(rollup@2.79.1)(vue@3.4.21)
   '@varlet/preset-unocss':
     specifier: ^3.2.2
     version: 3.2.2(unocss@0.58.7)
@@ -2737,7 +2740,6 @@ packages:
 
   /@popperjs/core@2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
-    dev: false
 
   /@rollup/plugin-alias@5.1.0(rollup@4.13.0):
     resolution: {integrity: sha512-lpA3RZ9PdIG7qqhEfv79tBffNaoDuukFDrmhLqg9ifv99u/ehn+lOg30x2zmhf8AQqQUZaMk/B9fZraQ6/acDQ==}
@@ -3884,12 +3886,25 @@ packages:
 
   /@varlet/icons@3.2.2:
     resolution: {integrity: sha512-WTWSj7MCdvy5BUc0cxpr5Cfqr9hUVfA/9EOh3q+dy0XUA0iAj0D4zo2AbtGdGFUYNSB+Z076g92heTanBX+D9Q==}
-    dev: false
 
   /@varlet/import-resolver@3.2.2:
     resolution: {integrity: sha512-PUmZ0fGj7ackoBTbi2ak3KcJlP8OZ0PNLLHdck9zDMPILkRNXb18F2LpjJtvzWFVthjPNlH03kvAXIiAHbr7Zg==}
     dependencies:
       '@varlet/shared': 3.2.2
+    dev: true
+
+  /@varlet/nuxt@0.0.10(rollup@2.79.1)(vue@3.4.21):
+    resolution: {integrity: sha512-FJI2n1isEco4nJlG3KGDMtQdc98EUhci5dthV7a0D8kPG/6eFrAXJRgaMDmsTlwk0Kal7xz8tyLmT0ptYF5WHg==}
+    dependencies:
+      '@nuxt/kit': 3.11.1(rollup@2.79.1)
+      '@varlet/ui': 3.2.2(vue@3.4.21)
+      knitwork: 1.0.0
+      magic-string: 0.29.0
+      unplugin: 1.10.0
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
     dev: true
 
   /@varlet/preset-unocss@3.2.2(unocss@0.58.7):
@@ -3919,7 +3934,6 @@ packages:
       dayjs: 1.11.10
       decimal.js: 10.4.3
       vue: 3.4.21(typescript@5.4.3)
-    dev: false
 
   /@varlet/use@3.2.2(vue@3.4.21):
     resolution: {integrity: sha512-ZjmkZqeRwBerpFKnCbVSqES7D2sKxdracQFd8TBnojtdECC8flxvG1p0vBU9QLC/YHPQ+OYz325O8J6dlu6zJw==}
@@ -3928,7 +3942,6 @@ packages:
     dependencies:
       '@varlet/shared': 3.2.2
       vue: 3.4.21(typescript@5.4.3)
-    dev: false
 
   /@vercel/nft@0.26.4:
     resolution: {integrity: sha512-j4jCOOXke2t8cHZCIxu1dzKLHLcFmYzC3yqAK6MfZznOL1QIJKd0xcFsXK3zcqzU7ScsE2zWkiMMNHGMHgp+FA==}
@@ -5272,7 +5285,6 @@ packages:
 
   /dayjs@1.11.10:
     resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
-    dev: false
 
   /db0@0.1.4:
     resolution: {integrity: sha512-Ft6eCwONYxlwLjBXSJxw0t0RYtA5gW9mq8JfBXn9TtC0nDPlqePAhpv9v4g9aONBi6JI1OXHTKKkUYGd+BOrCA==}
@@ -5329,7 +5341,6 @@ packages:
 
   /decimal.js@10.4.3:
     resolution: {integrity: sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==}
-    dev: false
 
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -7633,6 +7644,13 @@ packages:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
       sourcemap-codec: 1.4.8
+    dev: true
+
+  /magic-string@0.29.0:
+    resolution: {integrity: sha512-WcfidHrDjMY+eLjlU+8OvwREqHwpgCeKVBUpQ3OhYYuvfaYCUgcbuBzappNzZvg/v8onU3oQj+BYpkOJe9Iw4Q==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
   /magic-string@0.30.8:

@@ -17,8 +17,7 @@
     "@varlet/touch-emulator": "^3.2.2",
     "@varlet/ui": "^3.2.2",
     "html5-qrcode": "^2.3.8",
-    "peerjs": "^1.5.2",
-    "qr-scanner": "^1.4.2"
+    "peerjs": "^1.5.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.11.4",
@@ -29,7 +28,7 @@
     "@pinia/nuxt": "^0.5.1",
     "@unocss/eslint-config": "^0.58.7",
     "@unocss/nuxt": "^0.58.7",
-    "@varlet/import-resolver": "^3.2.2",
+    "@varlet/nuxt": "^0.0.10",
     "@varlet/preset-unocss": "^3.2.2",
     "@vite-pwa/nuxt": "^0.6.0",
     "@vitejs/plugin-basic-ssl": "^1.1.0",
@@ -40,8 +39,6 @@
     "nuxt": "^3.11.1",
     "pinia": "^2.1.7",
     "typescript": "^5.4.3",
-    "unplugin-auto-import": "^0.17.5",
-    "unplugin-vue-components": "^0.26.0",
     "vite-plugin-mkcert": "^1.17.5",
     "vite-plugin-qrcode": "^0.2.3",
     "vue-tsc": "^2.0.7"

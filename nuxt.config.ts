@@ -1,7 +1,4 @@
 import { qrcode } from 'vite-plugin-qrcode'
-import components from 'unplugin-vue-components/vite'
-import autoImport from 'unplugin-auto-import/vite'
-import { VarletImportResolver } from '@varlet/import-resolver'
 import { appDescription } from './constants/index'
 import { pwa } from './config/pwa'
 
@@ -13,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@varlet/nuxt',
   ],
 
   experimental: {
@@ -82,12 +80,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       qrcode(),
-      components({
-        resolvers: [VarletImportResolver()],
-      }),
-      autoImport({
-        resolvers: [VarletImportResolver({ autoImport: true })],
-      }),
     ],
     ssr: {
       noExternal: ['@varlet/ui'],
